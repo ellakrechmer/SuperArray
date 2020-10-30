@@ -4,6 +4,9 @@ public class Tester{
     SuperArray words=new SuperArray();
     words.add("kani");
     words.add("uni");
-    System.out.println(Arrays.toString(words.getData()));
+    words.add("ebi");
+    for (int i=0; i<words.size();i++){
+      System.out.println(words.get(i));
+    }
   }
 }
