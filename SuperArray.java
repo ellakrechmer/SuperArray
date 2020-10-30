@@ -16,11 +16,9 @@ public class SuperArray {
     return size;
   }
   public boolean add(String element) {
-    if (size()==data.length) return false;
-    else {
-      data[size()]=element;
-      return true;
-    }
+    if (size()==data.length) resize();
+    data[size()]=element;
+    return true;
   }
   public String get(int index) {
     return data[index];

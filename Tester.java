@@ -14,5 +14,18 @@ public class Tester{
     }
     words.resize();
     System.out.println(words.getData().length);
+    SuperArray letters= new SuperArray();
+    letters.add("a");
+    letters.add("b");
+    letters.add("c");
+    letters.add("d");
+    letters.add("e");
+    letters.add("f");
+    letters.add("g");
+    letters.add("h");
+    letters.add("i");
+    letters.add("j");
+    letters.add("k");
+    System.out.println(Arrays.toString(letters.getData()));
   }
 }
