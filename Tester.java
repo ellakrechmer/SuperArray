@@ -8,5 +8,9 @@ public class Tester{
     for (int i=0; i<words.size();i++){
       System.out.println(words.get(i));
     }
+    words.set(1, "ebi");
+    for (int i=0; i<words.size();i++){
+      System.out.println(words.get(i));
+    }
   }
 }
