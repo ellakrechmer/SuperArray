@@ -12,5 +12,7 @@ public class Tester{
     for (int i=0; i<words.size();i++){
       System.out.println(words.get(i));
     }
+    words.resize();
+    System.out.println(words.getData().length);
   }
 }
