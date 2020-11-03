@@ -95,4 +95,11 @@ public class SuperArray {
     }
     return index;
   }
+  public String[] toArray() {
+    String[] safe=new String[size];
+    for (int i=0; i<size; i++){
+      safe[i]=data[i];
+    }
+    return safe;
+  }
 }
