@@ -27,5 +27,16 @@ public class Tester{
     letters.add("j");
     letters.add("k");
     System.out.println(Arrays.toString(letters.getData()));
+
+    System.out.println(words.isEmpty());
+    SuperArray other = new SuperArray();
+    System.out.println(other.isEmpty());
+    other.add("1");
+    System.out.println(other.isEmpty());
+    System.out.println(words.toString());
+    System.out.println(other.toString());
+    System.out.println(other.contains("2"));
+    System.out.println(words.contains("uni"));
+    System.out.println(words.contains("ebi"));
   }
 }
