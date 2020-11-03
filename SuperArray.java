@@ -68,8 +68,11 @@ public class SuperArray {
   }
   public void add(int index, String element){
     if (size==data.length) resize();
+    String store=data[index];
     for (int i=index; i<size; i++) {
-      data[i+1]=data[i];
+      String curr=store;
+      store=data[i+1];
+      data[i+1]=curr;
     }
     size++;
     data[index]=element;

@@ -5,6 +5,7 @@ public class Tester{
     words.add("kani");
     words.add("uni");
     words.add("ebi");
+    words.add("word");
     System.out.println(words.toString());
     System.out.println(words.set(1, "adi"));
     System.out.println(words.toString());
