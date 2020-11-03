@@ -1,8 +1,10 @@
 public class SuperArray {
   private String[] data;
   private int size;
+
   public SuperArray(){
     data = new String[10];
+    size=0;
   }
   public String[] getData(){
     return data;
@@ -53,5 +55,9 @@ public class SuperArray {
       if (s.equals(data[i])) exists=true;
     }
     return exists;
+  }
+  public void clear() {
+    data = new String[10];
+    size=0;
   }
 }
