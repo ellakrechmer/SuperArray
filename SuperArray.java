@@ -85,4 +85,14 @@ public class SuperArray {
     size--;
     return removed;
   }
+  public int indexOf(String s){
+    int index=-1;
+    for (int i=0; i<size; i++) {
+      if (data[i].equals(s)){
+        index=i;
+        break;
+      }
+    }
+    return index;
+  }
 }

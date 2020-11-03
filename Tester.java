@@ -5,7 +5,7 @@ public class Tester{
     words.add("kani");
     words.add("uni");
     words.add("ebi");
-    words.add("word");
+    words.add("uni");
     System.out.println(words.toString());
     System.out.println(words.set(1, "adi"));
     System.out.println(words.toString());
@@ -25,5 +25,7 @@ public class Tester{
     System.out.println(words.toString());
     words.remove(1);
     System.out.println(words.toString());
+    System.out.println(words.indexOf("uni"));
+    System.out.println(words.indexOf("word"));
   }
 }
