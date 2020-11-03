@@ -7,10 +7,10 @@ public class SuperArray {
     size=0;
   }
   public SuperArray(int InitialCapacity){
-    ata = new String[InitialCapacity];
+    data = new String[InitialCapacity];
     size=0;
   }
-  
+
   public String[] getData(){
     return data;
   }
