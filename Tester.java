@@ -5,29 +5,11 @@ public class Tester{
     words.add("kani");
     words.add("uni");
     words.add("ebi");
-    for (int i=0; i<words.size();i++){
-      System.out.println(words.get(i));
-    }
-    System.out.println(words.set(1, "ebi"));
-    for (int i=0; i<words.size();i++){
-      System.out.println(words.get(i));
-    }
-    System.out.println(words.getData().length);
-    SuperArray letters= new SuperArray();
-    letters.add("a");
-    letters.add("b");
-    letters.add("c");
-    letters.add("d");
-    letters.add("e");
-    letters.add("f");
-    letters.add("g");
-    letters.add("h");
-    letters.add("i");
-    letters.add("j");
-    letters.add("k");
-    System.out.println(Arrays.toString(letters.getData()));
-
+    System.out.println(words.toString());
+    System.out.println(words.set(1, "adi"));
+    System.out.println(words.toString());
     System.out.println(words.isEmpty());
+    System.out.println();
     SuperArray other = new SuperArray();
     System.out.println(other.isEmpty());
     other.add("1");
@@ -37,7 +19,10 @@ public class Tester{
     System.out.println(other.contains("2"));
     System.out.println(words.contains("uni"));
     System.out.println(words.contains("ebi"));
+    System.out.println(words.toString());
     words.add(1, "uni");
-    System.out.println(Arrays.toString(words.getData()));
+    System.out.println(words.toString());
+    words.remove(1);
+    System.out.println(words.toString());
   }
 }
