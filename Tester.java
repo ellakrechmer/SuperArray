@@ -12,7 +12,6 @@ public class Tester{
     for (int i=0; i<words.size();i++){
       System.out.println(words.get(i));
     }
-    words.resize();
     System.out.println(words.getData().length);
     SuperArray letters= new SuperArray();
     letters.add("a");
@@ -38,7 +37,7 @@ public class Tester{
     System.out.println(other.contains("2"));
     System.out.println(words.contains("uni"));
     System.out.println(words.contains("ebi"));
-    words.clear();
+    words.add(1, "uni");
     System.out.println(Arrays.toString(words.getData()));
   }
 }
