@@ -6,6 +6,11 @@ public class SuperArray {
     data = new String[10];
     size=0;
   }
+  public SuperArray(int InitialCapacity){
+    ata = new String[InitialCapacity];
+    size=0;
+  }
+  
   public String[] getData(){
     return data;
   }
@@ -36,7 +41,6 @@ public class SuperArray {
       arr[i]=data[i];
     }
     data=arr;
-    size=size();
   }
   public boolean isEmpty() {
     return size==0;
