@@ -27,5 +27,15 @@ public class Tester{
     System.out.println(words.toString());
     System.out.println(words.indexOf("uni"));
     System.out.println(words.indexOf("word"));
+    System.out.println("\nTesting removeDuplicates()");
+    SuperArray words2 = new SuperArray();
+    //grouped to save vertical space
+    words2.add("kani");   words2.add("uni");     words2.add("ebi");     words2.add("una");
+    words2.add("una");    words2.add("ebi");     words2.add("kani");    words2.add("una");
+    words2.add("una");    words2.add("ebi");     words2.add("toro");
+
+    System.out.println(words2.toString());
+    SuperArray.removeDuplicates(words2);
+    System.out.println(words2.toString());
   }
 }

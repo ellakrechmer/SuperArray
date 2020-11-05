@@ -102,4 +102,11 @@ public class SuperArray {
     }
     return safe;
   }
+  public static void removeDuplicates(SuperArray s) {
+    for (int i=0; i<s.size; i++){
+      for (int j=i; j<s.size; j++){
+        if (s.data[j].equals(s.data[i])) s.remove(j);
+      }
+    }
+  }
 }
