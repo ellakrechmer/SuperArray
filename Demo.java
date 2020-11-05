@@ -55,6 +55,9 @@ public class Demo{
     System.out.println("\nTesting equals:");
     System.out.println(nums1.equals(nums2));
 
+    System.out.println("\nTesting zip:");
+    System.out.println(zip(nums1, nums2));
+
   }
   public static void removeDuplicates(SuperArray s) {
     for (int i=0; i<s.size(); i++){
@@ -72,6 +75,24 @@ public class Demo{
       if (b.contains(a.getData()[i])) s.add(a.getData()[i]);
     }
     removeDuplicates(s);
+    return s;
+  }
+  public static SuperArray zip(SuperArray a, SuperArray b) {
+    SuperArray s=new SuperArray();
+    for (int i=0; i<Math.min(a.size(), b.size()); i++) {
+      s.add(a.getData()[i]);
+      s.add(b.getData()[i]);
+    }
+    if (a.size()>b.size()) {
+      for (int i=b.size(); i<a.size(); i++) {
+        s.add(a.getData()[i]);
+      }
+    }
+    else {
+      for (int i=a.size(); i<b.size(); i++) {
+        s.add(b.getData()[i]);
+      }
+    }
     return s;
   }
 }
