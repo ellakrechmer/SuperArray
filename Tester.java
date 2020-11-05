@@ -27,6 +27,8 @@ public class Tester{
     System.out.println(words.toString());
     System.out.println(words.indexOf("uni"));
     System.out.println(words.indexOf("word"));
+
+    //11.05
     System.out.println("\nTesting removeDuplicates()");
     SuperArray words2 = new SuperArray();
     //grouped to save vertical space
@@ -37,5 +39,12 @@ public class Tester{
     System.out.println(words2);
     SuperArray.removeDuplicates(words2);
     System.out.println(words2);
+
+    System.out.println("\nTesting findOverlap()");
+    SuperArray nums1=new SuperArray();
+    nums1.add("9"); nums1.add("1"); nums1.add("2"); nums1.add("2"); nums1.add("3"); nums1.add("4");
+    SuperArray nums2=new SuperArray();
+    nums2.add("0"); nums2.add("4"); nums2.add("2"); nums2.add("2"); nums2.add("9");
+    System.out.println(SuperArray.findOverlap(nums1, nums2));
   }
 }
