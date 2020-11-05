@@ -102,22 +102,4 @@ public class SuperArray {
     }
     return safe;
   }
-  public static void removeDuplicates(SuperArray s) {
-    for (int i=0; i<s.size; i++){
-      for (int j=i+1; j<s.size; j++){
-        if (s.data[j].equals(s.data[i])) {
-          s.remove(j);
-          j--;
-        }
-      }
-    }
-  }
-  public static SuperArray findOverlap(SuperArray a, SuperArray b) {
-    SuperArray s=new SuperArray();
-    for (int i=0; i<a.size; i++) {
-      if (b.contains(a.data[i])) s.add(a.data[i]);
-    }
-    SuperArray.removeDuplicates(s);
-    return s;
-  }
 }
