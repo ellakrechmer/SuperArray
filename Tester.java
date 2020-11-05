@@ -27,6 +27,5 @@ public class Tester{
     System.out.println(words.toString());
     System.out.println(words.indexOf("uni"));
     System.out.println(words.indexOf("word"));
-    System.out.println(Arrays.toString(words.toArray()));
   }
 }
