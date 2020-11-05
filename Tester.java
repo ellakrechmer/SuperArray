@@ -34,8 +34,8 @@ public class Tester{
     words2.add("una");    words2.add("ebi");     words2.add("kani");    words2.add("una");
     words2.add("una");    words2.add("ebi");     words2.add("toro");
 
-    System.out.println(words2.toString());
+    System.out.println(words2);
     SuperArray.removeDuplicates(words2);
-    System.out.println(words2.toString());
+    System.out.println(words2);
   }
 }
