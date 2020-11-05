@@ -37,7 +37,7 @@ public class Demo{
     words2.add("una");    words2.add("ebi");     words2.add("toro");
 
     System.out.println(words2);
-    removeDuplicates(words2);
+    //removeDuplicates(words2);
     System.out.println(words2);
 
     System.out.println("\nTesting findOverlap()");
@@ -45,7 +45,12 @@ public class Demo{
     nums1.add("9"); nums1.add("1"); nums1.add("2"); nums1.add("2"); nums1.add("3"); nums1.add("4");
     SuperArray nums2=new SuperArray();
     nums2.add("0"); nums2.add("4"); nums2.add("2"); nums2.add("2"); nums2.add("9");
-    findOverlap(nums1, nums2);
+    //findOverlap(nums1, nums2);
+
+    System.out.println("\nTesting lastIndexOf");
+    System.out.println(words2.lastIndexOf("una"));
+    System.out.println(nums1.lastIndexOf("2"));
+    System.out.println(nums2.lastIndexOf("2"));
   }
   public static void removeDuplicates(SuperArray s) {
     for (int i=0; i<s.size(); i++){
