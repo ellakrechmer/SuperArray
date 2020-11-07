@@ -44,11 +44,12 @@ public class SuperArray {
     data=arr;
   }
   public boolean isEmpty() {
-    return size==0;
+    return size()==0;
   }
   public String toString() {
+    if (size()==0) return "[]";
     String str="[";
-    for (int i=0; i<size()-1; i++) {
+    for (int i=0; i<size-1; i++) {
       str+=data[i]+", ";
     }
     str+=data[size()-1]+"]";
@@ -56,7 +57,7 @@ public class SuperArray {
   }
   public boolean contains(String s) {
     boolean exists=false;
-    for (int i=0; i<size; i++) {
+    for (int i=0; i<size(); i++) {
       if (s.equals(data[i])) exists=true;
     }
     return exists;
@@ -68,7 +69,7 @@ public class SuperArray {
   public void add(int index, String element){
     if (size==data.length) resize();
     String store=data[index];
-    for (int i=index; i<size; i++) {
+    for (int i=index; i<size(); i++) {
       String curr=store;
       store=data[i+1];
       data[i+1]=curr;
@@ -78,14 +79,15 @@ public class SuperArray {
   }
   public String remove(int index){
     String removed=data[index];
-    for(int i=index; i<size-1; i++) {
+    for(int i=index; i<size()-1; i++) {
       data[i]=data[i+1];
     }
     data[size()-1]=null;
+    size--;
     return removed;
   }
   public int indexOf(String s){
-    for (int i=0; i<size; i++) {
+    for (int i=0; i<size(); i++) {
       if (data[i].equals(s)){
         return i;
       }
@@ -93,21 +95,21 @@ public class SuperArray {
     return -1;
   }
   public String[] toArray() {
-    String[] safe=new String[size];
+    String[] safe=new String[size()];
     for (int i=0; i<size(); i++){
       safe[i]=data[i];
     }
     return safe;
   }
   public int lastIndexOf(String value) {
-    for (int i=size-1; i>=0; i--) {
+    for (int i=size()-1; i>=0; i--) {
       if (data[i].equals(value)) return i;
     }
     return -1;
   }
   public boolean equals(SuperArray other){
-    if (size==other.size) {
-      for (int i=0; i<size; i++) {
+    if (size()==other.size) {
+      for (int i=0; i<size(); i++) {
         if (!(data[i].equals(other.data[i]))) return false;
       }
       return true;

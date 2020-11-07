@@ -38,8 +38,6 @@ public class Demo{
     words2.add("ebi");    words2.add("toro");
 
     System.out.println(words2);
-    words2.remove(3);
-    System.out.println(words2);
     removeDuplicates(words2);
     System.out.println(words2);
 
@@ -63,8 +61,10 @@ public class Demo{
 
   }
   public static void removeDuplicates(SuperArray s) {
-    for (int i=s.size(); i>0; i--){
-      if (s.indexOf(s.get(i))<i) s.remove(i);
+    for (int i=s.size()-1; i>0; i--){
+      if (s.indexOf(s.get(i))!=i) {
+        s.remove(i);
+      }
     }
   }
   public static SuperArray findOverlap(SuperArray a, SuperArray b) {
