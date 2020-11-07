@@ -10,7 +10,6 @@ public class SuperArray {
     data = new String[InitialCapacity];
     size=0;
   }
-
   public String[] getData(){
     return data;
   }
@@ -49,10 +48,10 @@ public class SuperArray {
   }
   public String toString() {
     String str="[";
-    for (int i=0; i<size-1; i++) {
+    for (int i=0; i<size()-1; i++) {
       str+=data[i]+", ";
     }
-    str+=data[size-1]+"]";
+    str+=data[size()-1]+"]";
     return str;
   }
   public boolean contains(String s) {
@@ -86,18 +85,16 @@ public class SuperArray {
     return removed;
   }
   public int indexOf(String s){
-    int index=-1;
     for (int i=0; i<size; i++) {
       if (data[i].equals(s)){
-        index=i;
-        break;
+        return i;
       }
     }
-    return index;
+    return -1;
   }
   public String[] toArray() {
     String[] safe=new String[size];
-    for (int i=0; i<size; i++){
+    for (int i=0; i<size(); i++){
       safe[i]=data[i];
     }
     return safe;
