@@ -38,6 +38,8 @@ public class Demo{
     words2.add("ebi");    words2.add("toro");
 
     System.out.println(words2);
+    words2.remove(3);
+    System.out.println(words2);
     removeDuplicates(words2);
     System.out.println(words2);
 
