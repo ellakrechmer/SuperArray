@@ -38,6 +38,7 @@ public class Demo{
     words2.add("ebi");    words2.add("toro");
 
     System.out.println(words2);
+    //System.out.println(words2.lastIndexOf("una"));
     removeDuplicates(words2);
     System.out.println(words2);
 
@@ -51,7 +52,7 @@ public class Demo{
     System.out.println("\nTesting lastIndexOf:");
     System.out.println(words2.lastIndexOf("una"));
     System.out.println(nums1.lastIndexOf("2"));
-    System.out.println(nums2.lastIndexOf("2"));
+    System.out.println(nums2.lastIndexOf("9"));
 
     System.out.println("\nTesting equals:");
     System.out.println(nums1.equals(nums2));
