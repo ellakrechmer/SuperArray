@@ -56,11 +56,10 @@ public class SuperArray {
     return str;
   }
   public boolean contains(String s) {
-    boolean exists=false;
     for (int i=0; i<size(); i++) {
-      if (s.equals(data[i])) exists=true;
+      if (data[i].equals(s)) return true;
     }
-    return exists;
+    return false;
   }
   public void clear() {
     data = new String[10];
