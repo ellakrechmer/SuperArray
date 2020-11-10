@@ -60,6 +60,8 @@ public class Demo{
     System.out.println("\nTesting zip:");
     System.out.println(zip(nums1, nums2));
 
+    System.out.println("\nTesting exceptions:");
+
   }
   public static void removeDuplicates(SuperArray s) {
     for (int i=s.size()-1; i>0; i--){
