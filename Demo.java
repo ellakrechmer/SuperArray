@@ -60,7 +60,13 @@ public class Demo{
     System.out.println("\nTesting zip:");
     System.out.println(zip(nums1, nums2));
 
-    System.out.println("\nTesting exceptions:");
+    System.out.println("\nTesting error handling:");
+    try{
+      SuperArray arr=new SuperArray(-2);
+    }
+    catch (IllegalArgumentException e1){
+      System.out.println("SuperArray cannot have negative capacity");
+    }
 
   }
   public static void removeDuplicates(SuperArray s) {
