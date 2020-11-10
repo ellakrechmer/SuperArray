@@ -61,13 +61,40 @@ public class Demo{
     System.out.println(zip(nums1, nums2));
 
     System.out.println("\nTesting error handling:");
-    try{
+    try {
       SuperArray arr=new SuperArray(-2);
     }
     catch (IllegalArgumentException e1){
       System.out.println("SuperArray cannot have negative capacity");
     }
 
+    try {
+      nums1.get(-3);
+    }
+    catch (IndexOutOfBoundsException e2){
+      System.out.println("Index is out of bounds for get");
+    }
+
+    try {
+      nums1.set(-3, "5");
+    }
+    catch (IndexOutOfBoundsException e3){
+      System.out.println("Index is out of bounds for set");
+    }
+
+    try {
+      nums1.add(30, "7");
+    }
+    catch (IndexOutOfBoundsException e4){
+      System.out.println("Index is out of bounds for add");
+    }
+
+    try {
+      nums1.remove(-3);
+    }
+    catch (IndexOutOfBoundsException e5){
+      System.out.println("Index is out of bounds for remove");
+    }
   }
   public static void removeDuplicates(SuperArray s) {
     for (int i=s.size()-1; i>0; i--){
